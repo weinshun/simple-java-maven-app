@@ -9,7 +9,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'echo "Fail!"; exit 1'
+        sh 'echo "Fail!"'
       }
     }
     stage('post') {
