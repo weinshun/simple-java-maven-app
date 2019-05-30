@@ -1,11 +1,10 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('bulid') {
       agent any
       steps {
-        build(job: 'clean package', quietPeriod: 4)
-        echo 'ok'
+        sh 'mvn -B -DskipTests clean package'
       }
     }
   }
